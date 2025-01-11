@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "464702823721",
+    "project_id": "ultra-mediator-434407-g5",
+    "storage_bucket": "ultra-mediator-434407-g5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464702823721:android:123c269409da5ec434eb38",
+        "android_client_info": {
+          "package_name": "com.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZbhgjRNhAS9Y_kpuCZaaPeFd30_DKc5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
