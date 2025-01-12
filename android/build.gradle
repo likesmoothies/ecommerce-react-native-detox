@@ -1,7 +1,7 @@
 buildscript {
     ext {
         buildToolsVersion = "34.0.0"
-        minSdkVersion = 23
+        minSdkVersion = 24
         compileSdkVersion = 34
         targetSdkVersion = 34
         ndkVersion = "27.1.12297006"
@@ -16,6 +16,15 @@ buildscript {
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
         classpath("com.google.gms:google-services:4.4.2") // Add the Google services Gradle plugin
+    }
+    allprojects {
+        repositories {
+            google()
+            maven { // (4)
+                url("$rootDir/../node_modules/detox/Detox-android")
+            }
+            maven { url 'https://www.jitpack.io' }
+        }
     }
 }
 

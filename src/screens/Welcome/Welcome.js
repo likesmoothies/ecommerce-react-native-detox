@@ -27,8 +27,9 @@ const Welcome = () => {
         translucent
         backgroundColor="transparent"
       />
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView testID={'welcomeScreen'} style={styles.container}>
         <TouchableOpacity
+          testID={'skipButton'}
           onPress={() => navigation.replace('Login')}
           style={styles.skipButton}>
           <Text style={styles.skipText}>Skip</Text>
@@ -36,14 +37,15 @@ const Welcome = () => {
 
         <Swiper
           ref={swiperRef}
+          testID="slides"
           loop={false}
           onIndexChanged={index => setActiveIndex(index)}
           showsPagination={false}>
           {onboarding.map(item => (
             <View key={item.id} style={styles.slide}>
               <item.image />
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.description}>{item.description}</Text>
+              <Text testID="welcomeTitle" style={styles.title}>{item.title}</Text>
+              <Text testID="welcomeDescription" style={styles.description}>{item.description}</Text>
             </View>
           ))}
         </Swiper>
@@ -52,7 +54,7 @@ const Welcome = () => {
           <TouchableOpacity
             onPress={() => swiperRef.current?.scrollBy(-1)}
             style={[activeIndex === 0 && styles.hidden]}>
-            <Text style={styles.prev}>Prev</Text>
+            <Text testID="welcomePrev" style={styles.prev}>Prev</Text>
           </TouchableOpacity>
 
           <View style={styles.pagination}>
