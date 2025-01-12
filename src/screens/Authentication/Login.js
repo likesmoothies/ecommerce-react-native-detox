@@ -96,6 +96,7 @@ const Login = () => {
       <GestureHandlerRootView style={styles.gestureHandle}>
         <SafeAreaView style={styles.container}>
           <ScrollView
+            testID="loginScreen"
             contentContainerStyle={styles.scrollContainer}
             showsVerticalScrollIndicator={false}>
             <View style={styles.headingWrap}>
@@ -121,6 +122,7 @@ const Login = () => {
                       <TextField
                         placeholder="Email"
                         value={values.email}
+                        testId="emailInput"
                         onChangeText={handleChange('email')}
                         onBlur={handleBlur('email')}
                         keyboardType="email-address"
@@ -131,6 +133,7 @@ const Login = () => {
                     <TextField
                       placeholder="Password"
                       value={values.password}
+                      testId="passwordInput"
                       onChangeText={handleChange('password')}
                       onBlur={handleBlur('password')}
                       error={touched.password && errors.password}
@@ -139,6 +142,7 @@ const Login = () => {
                     />
                     <View style={styles.forgotPasswordContainer}>
                       <Text
+                        testID="forgotPasswordLink" 
                         style={styles.forgotPasswordText}
                         onPress={() => navigation.navigate('ForgotPassword')}>
                         Forgot Password?
@@ -147,6 +151,7 @@ const Login = () => {
 
                     <View style={styles.buttonContainer}>
                       <CustomButton
+                        testID="loginButton"
                         name={
                           loading ? (
                             <ActivityIndicator color="#ffffff" />
@@ -170,6 +175,7 @@ const Login = () => {
                       <Text style={styles.signupText}>
                         Create An Account{' '}
                         <Text
+                          testID="signUpLink"
                           style={styles.signupLink}
                           onPress={() => navigation.navigate('Signup')}>
                           Sign Up
