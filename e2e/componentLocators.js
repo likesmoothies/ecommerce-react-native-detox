@@ -11,6 +11,12 @@ const welcomeScreen = {
   
 const loginScreen = {
     LOGIN_SCREEN: 'loginScreen',
+    EMAIL_INPUT: 'emailInput',
+    PASSWORD_INPUT:'passwordInput',
+    FORGOT_PASSWORD:'forgotPasswordLink',
+    lOGIN_BUTTON:'LoginButton',
+    SIGN_UP_LINK:'signUpLink',
+    LOGIN_HEADER:'Welcome Back!'
 };
 
 module.exports = {
