@@ -120,9 +120,9 @@ const Login = () => {
                   <View style={styles.formContainer}>
                     <View style={styles.fieldContainer}>
                       <TextField
+                        testID="emailInput"
                         placeholder="Email"
                         value={values.email}
-                        testId="emailInput"
                         onChangeText={handleChange('email')}
                         onBlur={handleBlur('email')}
                         keyboardType="email-address"
@@ -131,9 +131,9 @@ const Login = () => {
                       />
                     </View>
                     <TextField
+                      testID="passwordInput"
                       placeholder="Password"
                       value={values.password}
-                      testId="passwordInput"
                       onChangeText={handleChange('password')}
                       onBlur={handleBlur('password')}
                       error={touched.password && errors.password}
@@ -195,6 +195,7 @@ const Login = () => {
 
 export default Login;
 
+// Add waitFor() or toBeVisible() to Detox tests.
 const styles = StyleSheet.create({
   gestureHandle: {
     flex: 1,
